@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 import Contact from './Contact';
-import { Consumer } from '../context'
+import { Consumer } from '../../context'
 
 class Contacts extends Component {
 
@@ -11,7 +11,6 @@ class Contacts extends Component {
       <Consumer>
         {value => {
           const { contacts } = value
-          console.log(contacts)
           return (
             <Fragment>
               {contacts.map(contact => <Contact
